@@ -39,6 +39,33 @@ Massa leve, ingredientes frescos e o melhor forno da cidade. Experimente a verda
         </div>
       </section>
 
+      {/* secao em destaque*/}
+      <section className='py-12 bg-orange-50 mb-50'>
+        <div className=' flex flex-col items-center mx-50 gap-10 border rounded-lg py-10 bg-white'>
+          <h2 className='text-orange-700 text-4xl font-serif'>Destaques</h2>
+          <div className="grid grid-cols-3 gap-10">
+            <div className="flex flex-col bg-white border border-orange-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full items-center py-3 duration-300 hover:scale-101 w-70">
+              <img className="px-10" src="./imagens/pizza-destaque1.png" alt="" />
+              <h2 className="text-black text-center font-bold text-xl mx-2">Pizza de Frango c/ Catupiry</h2>
+              <p className="text-black py-3 px-2 font-semibold text-center">🔥 Explosão de sabor! Frango desfiado temperado no ponto, coberto com cremoso catupiry derretido — a combinação perfeita que conquista qualquer paladar!🍕</p>
+              <button className="text-black text-center bg-orange-400  hover:bg-orange-500 transition-colors font-bold rounded-lg px-4 w-30 h-10">Adicionar</button>
+            </div>
+            <div className="flex flex-col bg-white border border-orange-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full items-center py-3 duration-300 hover:scale-101 w-70">
+              <img className="px-10" src="./imagens/pizza-destaque1.png" alt="" />
+              <h2 className="text-black text-center font-bold text-xl mx-2">Pizza de Frango c/ Catupiry</h2>
+              <p className="text-black py-3 px-2 font-semibold text-center">🔥 Explosão de sabor! Frango desfiado temperado no ponto, coberto com cremoso catupiry derretido — a combinação perfeita que conquista qualquer paladar!🍕</p>
+              <button className="text-black text-center bg-orange-400  hover:bg-orange-500 transition-colors font-bold rounded-lg px-4 w-30 h-10 ">Adicionar</button>
+            </div>
+            <div className="flex flex-col bg-white border border-orange-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full items-center py-3 duration-300 hover:scale-101 w-70">
+              <img className="px-10" src="./imagens/pizza-destaque1.png" alt="" />
+              <h2 className="text-black text-center font-bold text-xl mx-2">Pizza de Frango c/ Catupiry</h2>
+              <p className="text-black py-3 px-2 font-semibold text-center">🔥 Explosão de sabor! Frango desfiado temperado no ponto, coberto com cremoso catupiry derretido — a combinação perfeita que conquista qualquer paladar!🍕</p>
+              <button className="text-black text-center bg-orange-400  hover:bg-orange-500 transition-colors font-bold rounded-lg px-4 w-30 h-10 ">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
   );
