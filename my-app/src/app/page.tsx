@@ -24,6 +24,21 @@ Massa leve, ingredientes frescos e o melhor forno da cidade. Experimente a verda
         </div>
         <div />
       </section>
+
+      <section className='flex my-8 justify-center py-12 gap-10'>
+        <div className="flex flex-col gap-3">
+          <div className="w-70 h-64 shadow-2xl overflow-hidden">
+            <img src="./imagens/card1.png" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="w-70 h-64 shadow-2xl overflow-hidden">
+            <img src="./imagens/card2.jpg" alt="" className="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div className="bg-white w-80 shadow-2xl overflow-hidden">
+          <img src="./imagens/card3.jpeg" alt="" className="w-full h-auto" />
+        </div>
+      </section>
+
     </main>
 
   );
