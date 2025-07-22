@@ -13,21 +13,22 @@ export default function Header(){
                         </div>
                     </Link>    
                 
-                <nav className="hidden lg:flex lg:gap-6">
-                    <Link className="hover:text-orange-500 transition-colors" href="#">
-                    Home
-                    </Link>
+                <nav className="flex gap-6 items-center">
                 
                     <Link className="hover:text-orange-500 transition-colors" href="#contato">
                     Contato
                     </Link>
 
                     <Link className="hover:text-orange-500 transition-colors" href="/Sobre">
-                    Sobre nos
+                    Sobre nós
                     </Link>
 
-                    <Link className="hover:text-orange-500 transition-colors" href="/">
-                    Carrinho
+                    <Link className="hover:scale-110 transition duration-300" href="/">
+                    <img className="size-8" src="imagens/logo-carrinho.png" alt="" />
+                    </Link>
+
+                    <Link className="hover:scale-110 transition duration-300" href="/">
+                    <img className="size-8" src="imagens/logo-user.png" alt="" />
                     </Link>
                 </nav>
             </div>
