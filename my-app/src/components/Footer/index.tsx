@@ -5,7 +5,11 @@ export default function Footer() {
 
                 {/* Logo / Nome */}
                 <div>
-                    <h2 className="text-2xl font-bold mb-3">byron.Pizzas</h2>
+                    <div className="flex items-center">
+                            <img className="rotate-20 size-7 translate-y-[-2px]" src="imagens/icons8-pizza-48.png" alt="" />
+                            <h2 className="text-2xl">byron.Pizzas</h2>
+                            <img className="rotate-200 size-7 mt-0.5" src="imagens/icons8-pizza-48.png" alt="" />
+                    </div>
                     <p className="text-sm">Sabor que conquista no primeiro pedaço!
 Massa leve, ingredientes frescos e o melhor forno da cidade. Experimente a verdadeira pizza artesanal!</p>
                 </div>
