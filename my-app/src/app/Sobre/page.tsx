@@ -56,9 +56,9 @@ export default function SobrePage() {
                     <h2 className="text-3xl font-bold text-orange-600">Conheça a Equipe</h2>
                 </div>
 
-                <div className="max-w-6xl mx-auto grid grid-cols-3 gap-10 px-6 mb-1">
+                <div className="max-w-6xl mx-auto grid sm:grid-cols-3 gap-10 px-6 mb-1">
                     {chefe.map((member, index) => (
-                        <div key={index} className="col-start-2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
+                        <div key={index} className="sm:col-start-2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
                             <img
                                 src={member.image}
                                 alt={member.name}
@@ -71,7 +71,7 @@ export default function SobrePage() {
                     ))}
                 </div>
 
-                <div className="max-w-6xl mx-auto grid grid-cols-3 gap-10 px-6 mt-10">
+                <div className="max-w-6xl mx-auto grid sm:grid-cols-3 gap-10 px-6 mt-10">
                     {membros.map((member, index) => (
                         <div key={index} className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
                             <img
