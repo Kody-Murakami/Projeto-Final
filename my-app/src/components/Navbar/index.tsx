@@ -20,11 +20,11 @@ export default function Navbar() {
       
       {/* Menu de navegação mobile */}
       {isOpen && (
-        <nav className="lg:hidden flex flex-col space-y-4 mt-4 px-4">
-          <Link href="#contato" onClick={() => setIsOpen(false)}>Contato</Link>
-          <Link href="/Sobre" onClick={() => setIsOpen(false)}>Sobre nós</Link>
-          <Link href="/Sobre" onClick={() => setIsOpen(false)}>Carrinho</Link>
-          <Link href="/Sobre" onClick={() => setIsOpen(false)}>Cadastre-se</Link>
+        <nav className="lg:hidden flex flex-col space-y-4 mt-4 px-4 bg-white text-black border rounded-lg py-2">
+          <Link href="#contato" onClick={() => setIsOpen(false)}> - Contato</Link>
+          <Link href="/Sobre" onClick={() => setIsOpen(false)}> - Sobre nós</Link>
+          <Link href="/Sobre" onClick={() => setIsOpen(false)}> - Carrinho</Link>
+          <Link href="/Sobre" onClick={() => setIsOpen(false)}> - Cadastre-se</Link>
         </nav>
       )}
     </header>
