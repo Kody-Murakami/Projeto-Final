@@ -21,8 +21,8 @@ export default function Home() {
           <p className='text-4\3xl text-center w-full sm:w-100'>Sabor que conquista no primeiro pedaço!
 Massa leve, ingredientes frescos e o melhor forno da cidade. Experimente a verdadeira pizza artesanal!</p>
           <Link
-            href='#contato'
-            className='bg-orange-800 hover:bg-orange-400 transition-colors text-black font-bold rounded-lg px-4 py-2 sm:mx-30'
+            href='/Cardapio'
+            className='bg-orange-500 hover:bg-orange-700 transition-colors text-black font-bold rounded-lg px-4 py-2 sm:mx-30'
           >
             Ver cardapio
           </Link>
