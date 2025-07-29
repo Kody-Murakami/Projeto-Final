@@ -29,7 +29,7 @@ export default function Header(){
                     Sobre nós
                     </Link>
 
-                    <Link className="hidden lg:block hover:scale-110 transition duration-300" href="/">
+                    <Link className="hidden lg:block hover:scale-110 transition duration-300" href="/Carrinho">
                     <img className="size-8" src="imagens/logo-carrinho.png" alt="" />
                     </Link>
 
