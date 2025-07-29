@@ -24,7 +24,7 @@ export default function Home() {
             href='/Cardapio'
             className='bg-orange-500 hover:bg-orange-700 transition-colors text-black font-bold rounded-lg px-4 py-2 sm:mx-30'
           >
-            Ver cardapio
+            Ver cardápio
           </Link>
         </div>
         <div />
@@ -80,7 +80,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center py-3">
-                <button className="text-black text-center bg-orange-400 hover:bg-orange-500 transition-colors font-bold rounded-lg px-4 w-30 h-10">
+                <button className="text-black text-center bg-orange-500 hover:bg-orange-700 transition-colors font-bold rounded-lg px-4 w-30 h-10">
                   Adicionar
                 </button>
               </div>
@@ -98,7 +98,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center py-3">
-                <button className="text-black text-center bg-orange-400 hover:bg-orange-500 transition-colors font-bold rounded-lg px-4 w-30 h-10">
+                <button className="text-black text-center bg-orange-500 hover:bg-orange-700 transition-colors font-bold rounded-lg px-4 w-30 h-10">
                   Adicionar
                 </button>
               </div>
