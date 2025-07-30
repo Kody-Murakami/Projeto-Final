@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function LoginPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-900 text-white">
+    <main className="flex min-h-screen items-center justify-center bg-orange-50 text-white">
       <div className="w-full max-w-md rounded-lg bg-black p-8 shadow-2xl">
         <h1 className="mb-6 text-center text-3xl font-bold">Login</h1>
         <form>
@@ -40,7 +40,7 @@ export default function LoginPage() {
         </form>
         <p className="mt-6 text-center text-sm text-gray-400">
           Não tem uma conta?{' '}
-          <Link href="/register" className="font-medium text-orange-500 hover:underline">
+          <Link href="/Cadastro" className="font-medium text-orange-500 hover:underline">
             Cadastre-se
           </Link>
         </p>
