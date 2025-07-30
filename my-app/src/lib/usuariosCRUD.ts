@@ -35,3 +35,7 @@ export async function deletarUsuario(id: number): Promise<boolean> {
   await ConexaoBD.armazenaBD(CAMINHO_BD, novosUsuarios);
   return true;
 }
+
+export async function listarUsuarios(): Promise<Usuario[]> {
+  return await ConexaoBD.retornaBD(CAMINHO_BD);
+}
