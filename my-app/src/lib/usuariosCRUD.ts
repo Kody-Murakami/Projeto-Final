@@ -27,3 +27,11 @@ export async function atualizarUsuario(id: number, dadosAtualizados: Partial<Omi
   await ConexaoBD.armazenaBD(CAMINHO_BD, usuarios);
   return usuarios[index];
 }
+
+export async function deletarUsuario(id: number): Promise<boolean> {
+  const usuarios = await ConexaoBD.retornaBD(CAMINHO_BD);
+  const novosUsuarios = usuarios.filter((u: Usuario) => u.id !== id);
+  if (novosUsuarios.length === usuarios.length) return false;
+  await ConexaoBD.armazenaBD(CAMINHO_BD, novosUsuarios);
+  return true;
+}
