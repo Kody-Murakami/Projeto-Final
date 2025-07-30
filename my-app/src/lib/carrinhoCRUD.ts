@@ -29,3 +29,11 @@ export async function atualizarItemCarrinho(id: number, dadosAtualizados: Partia
   await ConexaoBD.armazenaBD(CAMINHO_BD, itens);
   return itens[index];
 }
+
+export async function deletarItemCarrinho(id: number): Promise<boolean> {
+  const itens = await ConexaoBD.retornaBD(CAMINHO_BD);
+  const novosItens = itens.filter((i: ItemCarrinho) => i.id !== id);
+  if (novosItens.length === itens.length) return false;
+  await ConexaoBD.armazenaBD(CAMINHO_BD, novosItens);
+  return true;
+}
