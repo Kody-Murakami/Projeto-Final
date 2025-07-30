@@ -20,3 +20,12 @@ export async function adicionarItemCarrinho(novoItem: Omit<ItemCarrinho, 'id'>):
   await ConexaoBD.armazenaBD(CAMINHO_BD, itens);
   return item;
 }
+
+export async function atualizarItemCarrinho(id: number, dadosAtualizados: Partial<Omit<ItemCarrinho, 'id'>>): Promise<ItemCarrinho | null> {
+  const itens = await ConexaoBD.retornaBD(CAMINHO_BD);
+  const index = itens.findIndex((i: ItemCarrinho) => i.id === id);
+  if (index === -1) return null;
+  itens[index] = { ...itens[index], ...dadosAtualizados };
+  await ConexaoBD.armazenaBD(CAMINHO_BD, itens);
+  return itens[index];
+}
