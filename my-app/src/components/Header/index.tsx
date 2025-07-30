@@ -33,7 +33,7 @@ export default function Header(){
                     <img className="size-8" src="imagens/logo-carrinho.png" alt="" />
                     </Link>
 
-                    <Link className="hidden lg:block hover:scale-110 transition duration-300" href="/">
+                    <Link className="hidden lg:block hover:scale-110 transition duration-300" href="/Login">
                     <img className="size-8" src="imagens/logo-user.png" alt="" />
                     </Link>
                 </nav>
