@@ -37,3 +37,7 @@ export async function deletarItemCarrinho(id: number): Promise<boolean> {
   await ConexaoBD.armazenaBD(CAMINHO_BD, novosItens);
   return true;
 }
+
+export async function listarItensCarrinho(): Promise<ItemCarrinho[]> {
+  return await ConexaoBD.retornaBD(CAMINHO_BD);
+}
