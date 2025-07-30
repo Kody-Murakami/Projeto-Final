@@ -18,3 +18,12 @@ export async function criarUsuario(novoUsuario: Omit<Usuario, 'id'>): Promise<Us
   await ConexaoBD.armazenaBD(CAMINHO_BD, usuarios);
   return usuario;
 }
+
+export async function atualizarUsuario(id: number, dadosAtualizados: Partial<Omit<Usuario, 'id'>>): Promise<Usuario | null> {
+  const usuarios = await ConexaoBD.retornaBD(CAMINHO_BD);
+  const index = usuarios.findIndex((u: Usuario) => u.id === id);
+  if (index === -1) return null;
+  usuarios[index] = { ...usuarios[index], ...dadosAtualizados };
+  await ConexaoBD.armazenaBD(CAMINHO_BD, usuarios);
+  return usuarios[index];
+}
