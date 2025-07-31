@@ -19,8 +19,8 @@ Massa leve, ingredientes frescos e o melhor forno da cidade. Experimente a verda
                     <h3 className="text-xl font-semibold mb-3">Links</h3>
                     <ul className="space-y-2 flex flex-col md:items-center">
                         <li><a href="#" className="hover:underline">Home</a></li>
-                        <li><a href="#" className="hover:underline">Cardápio</a></li>
-                        <li><a href="#" className="hover:underline">Sobre nós</a></li>
+                        <li><a href="/Cardapio" className="hover:underline">Cardápio</a></li>
+                        <li><a href="/Sobre" className="hover:underline">Sobre nós</a></li>
                         <div className="flex items-center ml-[-10]">
                             <li><a href="https://instagram.com/byron.solutions" className="hover:underline"><img className="w-15 h-15 overflow-hidden" src="./imagens/logo_instagram.png" alt=""/></a></li>
                             <li><a href="https://wa.me/19971662807" className="hover:underline"><img className="w-8 h-8" src="./imagens/logo_whatsapp.png" alt="" /></a></li>
