@@ -1,9 +1,16 @@
 "use server";
+export interface LoginFormState {
+  success: boolean;
+  message: string;
+}
 
 import { redirect } from "next/navigation";
 import { encontrarUsuarioPorEmail } from "../../lib/usuariosCRUD"; 
 
-export async function handleLogin(formData: FormData) {
+export async function handleLogin(
+  prevState: LoginFormState, 
+  formData: FormData
+): Promise<LoginFormState> {
   const email = formData.get("email") as string;
   const senha = formData.get("password") as string;
 
@@ -11,20 +18,17 @@ export async function handleLogin(formData: FormData) {
     const usuario = await encontrarUsuarioPorEmail(email);
 
     if (!usuario) {
-      throw new Error("Email não encontrado.");
+     return { success: false, message: "Email não encontrado." };
     }
 
     if (usuario.senha !== senha) {
-      throw new Error("Senha incorreta.");
+     return { success: false, message: "Senha incorreta." };
     }
 
     console.log("Login bem-sucedido para:", usuario.email);
 
   } catch (error) {
-    if (error instanceof Error) {
-        console.error(error.message);
-        throw error; 
-    }
+    return { success: false, message: "Ocorreu um erro no servidor. Tente novamente." };
   }
 
   redirect("/");

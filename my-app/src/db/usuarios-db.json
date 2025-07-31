@@ -10,5 +10,11 @@
     "nome": "Fabricio Pontes Ferreira",
     "email": "pontesfabricio546@gmail.com",
     "senha": "fabricio1911"
+  },
+  {
+    "id": 3,
+    "nome": "ozzy osbourne da silva",
+    "email": "ozzy@eu.com.br",
+    "senha": "ironman123"
   }
 ]
