@@ -20,7 +20,7 @@ export default function Cardapio() {
         {pizzas.slice(0, 4).map((produto) => (
           <button
             key={produto.id}
-            onClick={() => adicionarItem(produto)} // Use a função do contexto
+            onClick={() => adicionarItem(produto)}
           >
             <div
               className="bg-white text-black rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300 border border-orange-700"

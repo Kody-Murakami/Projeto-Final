@@ -4,6 +4,7 @@ export interface Produto {
   descricao: string;
   preco: number;
   imagem: string;
+  descricao_destaque?: string;
 }
   
 
@@ -44,6 +45,7 @@ export const pizzas: Produto[] = [
       "Queijo cremoso, carne levemente temperada e um toque especial de molho barbecue.",
     preco: 45.90,
     imagem: "/imagens/cardapio/sally.jpeg",
+    descricao_destaque: "🔥 Uma explosão de sabor com ingredientes saltitantes!"
   },
   {
     id: 6,
@@ -52,6 +54,7 @@ export const pizzas: Produto[] = [
       "Muçarela especial, calabresa artesanal, tiras crocantes de bacon, toque leve de catupiry e finalizada com orégano fresco e azeite premium.",
     preco: 45.90,
     imagem: "/imagens/cardapio/byroniana.jpeg",
+    descricao_destaque: "🔥 A estrela do nosso cardápio!"
   },
   {
     id: 7,
@@ -60,6 +63,8 @@ export const pizzas: Produto[] = [
       "Queijo, fatias de salmão defumado, cream cheese, cebolinha e um toque de shoyu.",
     preco: 45.90,
     imagem: "/imagens/cardapio/japonesa2.jpeg",
+    descricao_destaque: "🔥 A fusão perfeita entre a tradição italiana e o requinte japonês!"
+
   },
   {
     id: 8,
