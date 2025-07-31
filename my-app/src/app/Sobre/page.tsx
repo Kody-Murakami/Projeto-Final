@@ -3,7 +3,7 @@ const chefe = [
     {
         name: 'Vinicius Kody Murakami',
         role: 'Chefe',
-        image: 'imagens/membros/',
+        image: '/imagens/membros/kody.png',
     }
 ];
 
@@ -16,7 +16,7 @@ const membros = [
     {
         name: 'Joao Victor Assis',
         role: 'Desenvolvedor',
-        image: '/imagens/membros/',
+        image: '/imagens/membros/joao.png',
     },
     {
         name: 'Fabricio Pontes Ferreira',
