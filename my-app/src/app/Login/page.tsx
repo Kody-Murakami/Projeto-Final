@@ -1,12 +1,26 @@
+"use client";
+
 import Link from 'next/link';
+import { useActionState } from 'react';
 import { handleLogin } from './actions';
 
 export default function LoginPage() {
+
+  const initialState = { success: false, message: "" };
+  const [state, formAction] = useActionState(handleLogin, initialState);
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-orange-50 text-white">
       <div className="w-full max-w-md rounded-lg bg-black p-8 shadow-2xl">
+
+        {state.message && !state.success && (
+          <div className="mb-4 rounded-lg bg-red-500 p-3 text-center text-white">
+            <p>{state.message}</p>
+          </div>
+        )}
+
         <h1 className="mb-6 text-center text-3xl font-bold">Login</h1>
-        <form action={handleLogin}>
+        <form action={formAction}>
           <div className="mb-4">
             <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-300">
               Email
