@@ -1,45 +1,63 @@
 'use client';
+
+
+import Link from 'next/link';
+import { useCarrinho } from '../../contexts/CarrinhoContext';
+
+
 export default function Carrinho() {
-    return (
-        <section className="bg-orange-50 py-12 px-6">
-            <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-8 space-y-8">
-                <h2 className="text-3xl font-bold text-orange-600 text-center">🛒 Seu Carrinho</h2>
-
-                <button className="bg-orange-500 hover:bg-orange-700 text-white rounded-md px-4 py-1 text-lg">
-                Limpar Carrinho
-                </button>
-
-                <div className="flex flex-col md:flex-row items-center gap-6 border-b pb-6">
-                    <img src="./imagens/cardapio/sally.jpeg" alt="Pizza da Sally" className="w-28 h-28 rounded-lg object-cover" />
-
-                    <div className="flex-1">
-                        <h3 className="text-2xl font-semibold text-gray-800">Pizza da Sally</h3>
-                        <p className="text-sm text-gray-600">Queijo cremoso, carne temperada e molho barbecue</p>
-                        <p className="text-orange-500 font-bold mt-2">R$ 39,90</p>
-                        <p className="text-sm text-gray-700">Quantidade: 1</p>
+  const { carrinho, adicionarItem, removerItem, limparCarrinho } = useCarrinho();
+  const total = carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
+  return (
+    <main className='bg-orange-50 text-orange-600 font-bold min-h-screen py-12 px-4'>
+      <section className="max-w-3xl mx-auto py-12">
+        <h2 className="text-3xl font-bold mb-6 text-center text-orange-700">🛒Carrinho</h2>
+        {carrinho.length === 0 ? (
+          <div className='flex flex-col gap-5 items-center'>
+            <p className="text-center text-gray-500">Seu carrinho está vazio.</p>
+          </div>
+        ) : (
+          <>
+            <ul className="divide-y divide-gray-300">
+              {carrinho.map((item) => (
+                <div className='bg-white'>
+                  <li key={item.id} className="flex justify-between items-center py-2 gap-5 shadow-2xl">
+                    <div className='flex flex-col px-5'>
+                      <span>{item.nome} x{item.quantidade}</span>
+                      <span>R$ {item.preco}</span>
                     </div>
-
-                    <div className="flex flex-col gap-2">
-                        <button className="bg-red-400 hover:bg-red-500 text-white rounded-md px-4 py-1 text-sm">
-                            Remover
-                        </button>
-                        <button className="bg-green-400 hover:bg-green-500 text-white rounded-md px-4 py-1 text-sm">
-                            Adicionar 
-                        </button>
+                    <div className="px-5 py-5 grid gap-2">
+                      <button
+                        onClick={() => removerItem(item.id)}
+                        className="bg-red-500 text-white px-2 py-1 rounded"
+                      >
+                        Remover
+                      </button>
+                      <button
+                        onClick={() => adicionarItem(item)}
+                        className="bg-green-500 text-white px-2 py-1 rounded"
+                      >
+                        Adicionar
+                      </button>
                     </div>
+                  </li>
                 </div>
-
-                <div className="text-right font-bold text-2xl text-orange-600 mt-6">
-                    Total: R$ 39,90
-                </div>
-
-                <div className="flex justify-end">
-                    <button className="bg-orange-500 hover:bg-orange-700 text-white rounded-md px-4 py-1 text-lg">
-                    Finalizar Compra
-                    </button>
-                </div>
-
-            </div>
-        </section>
-    );
+              ))}
+            </ul>
+            <p className="text-left mt-4 font-bold text-xl">Total: R$ {total.toFixed(2)}</p>
+            <button
+              onClick={limparCarrinho}
+              className="mt-6 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 block mx-auto"
+            >
+              Limpar Carrinho
+            </button>
+          </>
+        )}
+      </section>
+      <div className='flex justify-center'>
+        <Link href='/Cardapio' className='text-orange-700 font-bold rounded-lg px-4 py-2 sm:mx-30'>Adicionar produtos
+        </Link>
+      </div>
+    </main>
+  );
 }
