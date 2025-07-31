@@ -20,8 +20,8 @@ const membros = [
     },
     {
         name: 'Fabricio Pontes Ferreira',
-        role: 'Desenvolvedo',
-        image: '/imagens/membros',
+        role: 'Desenvolvedor',
+        image: '/imagens/membros/fabricio.jpg',
     },
 
 ];
