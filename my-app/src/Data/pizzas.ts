@@ -41,7 +41,7 @@ export const pizzas: Produto[] = [
     id: 5,
     nome: "Pizza da Sally",
     descricao:
-      "Queijo cremoso, carne levemente temperada e um toque especial de molho barbecue",
+      "Queijo cremoso, carne levemente temperada e um toque especial de molho barbecue.",
     preco: 45.90,
     imagem: "/imagens/cardapio/sally.jpeg",
   },
@@ -49,7 +49,7 @@ export const pizzas: Produto[] = [
     id: 6,
     nome: "byroniana",
     descricao:
-      "Muçarela especial, calabresa artesanal, tiras crocantes de bacon, toque leve de catupiry e finalizada com orégano fresco e azeite premium",
+      "Muçarela especial, calabresa artesanal, tiras crocantes de bacon, toque leve de catupiry e finalizada com orégano fresco e azeite premium.",
     preco: 45.90,
     imagem: "/imagens/cardapio/byroniana.jpeg",
   },
@@ -63,9 +63,9 @@ export const pizzas: Produto[] = [
   },
   {
     id: 8,
-    nome: "Chororango",
+    nome: "Chocorango",
     descricao:
-      "A combinação do amargo sutil do chocolate com a doçura e acidez dos morangos cria um equilíbrio perfeito, tornando cada mordida uma experiência deliciosa.",
+      "A combinação do amargo sutil do chocolate com a doçura e acidez dos morangos cria um equilíbrio perfeito.",
     preco: 38.90,
     imagem: "/imagens/cardapio/doce1.jpeg",
   },
@@ -73,7 +73,7 @@ export const pizzas: Produto[] = [
     id: 9,
     nome: "Banana",
     descricao:
-      "A combinação da banana macia com a crocância da massa e o toque doce do chocolate é simplesmente irresistível.",
+      "A combinação da banana macia com a crocância da massa e o toque doce do chocolate.",
     preco: 35.90,
     imagem: "/imagens/cardapio/doce3.jpeg",
   },
@@ -81,7 +81,7 @@ export const pizzas: Produto[] = [
     id: 10,
     nome: "Choco branco",
     descricao:
-      "Raspas de chocolate branco, merengues pequenos e até mesmo morangos banhados em chocolate branco, criando uma textura e um sabor suaves e luxuosos.",
+      "Raspas de chocolate branco, merengues pequenos e morangos banhados em chocolate branco.",
     preco: 39.9,
     imagem: "/imagens/cardapio/doce2.jpeg",
   },

@@ -33,7 +33,7 @@ export default function Cardapio() {
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-1">{produto.nome}</h2>
                 <p className="text-sm mb-2">{produto.descricao}</p>
-                <span className="text-lg font-semibold text-orange-600">{produto.preco}</span>
+                <span className="text-lg font-semibold text-orange-600">R$ {produto.preco}</span>
               </div>
             </div>
           </button>
@@ -42,14 +42,14 @@ export default function Cardapio() {
 
       <h2 className="text-2xl font-bold text-center mb-12 mt-12">Pizzas Especiais</h2>
 
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto">
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto items-stretch">
         {pizzas.slice(4, 7).map((produto) => (
           <button
             key={produto.id}
             onClick={() => adicionarItem(produto)} // Use a função do contexto
           >
             <div
-              className="bg-white text-black rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300 border border-orange-700"
+              className="bg-white text-black rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300 border border-orange-700 h-full"
             >
               <img
                 src={produto.imagem}
@@ -85,7 +85,7 @@ export default function Cardapio() {
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-1">{produto.nome}</h2>
                 <p className="text-sm mb-2">{produto.descricao}</p>
-                <span className="text-lg font-semibold text-orange-600">{produto.preco}</span>
+                <span className="text-lg font-semibold text-orange-600">R$ {produto.preco}</span>
               </div>
             </div>
           </button>
@@ -100,3 +100,4 @@ export default function Cardapio() {
     </main>
   );
 }
+
