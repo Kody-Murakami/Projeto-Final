@@ -39,3 +39,8 @@ export async function deletarUsuario(id: number): Promise<boolean> {
 export async function listarUsuarios(): Promise<Usuario[]> {
   return await ConexaoBD.retornaBD(CAMINHO_BD);
 }
+
+export async function encontrarUsuarioPorEmail(email: string): Promise<Usuario | undefined> {
+  const usuarios = await ConexaoBD.retornaBD(CAMINHO_BD);
+  return usuarios.find((u: Usuario) => u.email === email);
+}

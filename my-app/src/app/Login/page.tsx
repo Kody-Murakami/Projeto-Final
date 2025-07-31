@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import { handleLogin } from './actions';
 
 export default function LoginPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-orange-50 text-white">
       <div className="w-full max-w-md rounded-lg bg-black p-8 shadow-2xl">
         <h1 className="mb-6 text-center text-3xl font-bold">Login</h1>
-        <form>
+        <form action={handleLogin}>
           <div className="mb-4">
             <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-300">
               Email
@@ -13,6 +14,7 @@ export default function LoginPage() {
             <input
               type="email"
               id="email"
+              name="email"
               className="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
               placeholder="seu@email.com"
               required
@@ -27,6 +29,7 @@ export default function LoginPage() {
             <input
               type="password"
               id="password"
+              name="password"
               className="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
               placeholder="••••••••"
               required
