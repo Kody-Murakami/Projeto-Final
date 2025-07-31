@@ -1,57 +1,63 @@
 'use client';
 
-// Importe o hook useCarrinho que você criou
-import { useCarrinho } from '../../contexts/CarrinhoContext'; // Ajuste o caminho conforme sua estrutura
 
-// A função do componente não recebe mais props
+import Link from 'next/link';
+import { useCarrinho } from '../../contexts/CarrinhoContext';
+
+
 export default function Carrinho() {
-  // Use o hook para obter o estado e as funções do carrinho
   const { carrinho, adicionarItem, removerItem, limparCarrinho } = useCarrinho();
-
-  // A lógica de cálculo do total permanece a mesma
   const total = carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
-
-  // O JSX (a estrutura HTML) permanece inalterado
   return (
-    <section className="mt-16 px-4 max-w-3xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center">Carrinho</h2>
-
-      {carrinho.length === 0 ? (
-        <p className="text-center text-gray-500">Seu carrinho está vazio.</p>
-      ) : (
-        <>
-          <ul className="divide-y divide-gray-300">
-            {carrinho.map((item) => (
-              <li key={item.id} className="flex justify-between items-center py-2">
-                <span>{item.nome} x{item.quantidade}</span>
-                <div className="space-x-2">
-                  <button
-                    onClick={() => removerItem(item.id)}
-                    className="bg-red-500 text-white px-2 py-1 rounded"
-                  >
-                    -
-                  </button>
-                  <button
-                    onClick={() => adicionarItem(item)}
-                    className="bg-green-500 text-white px-2 py-1 rounded"
-                  >
-                    +
-                  </button>
+    <main className='bg-orange-50 text-orange-600 font-bold min-h-screen py-12 px-4'>
+      <section className="max-w-3xl mx-auto py-12">
+        <h2 className="text-3xl font-bold mb-6 text-center text-orange-700">🛒Carrinho</h2>
+        {carrinho.length === 0 ? (
+          <div className='flex flex-col gap-5 items-center'>
+            <p className="text-center text-gray-500">Seu carrinho está vazio.</p>
+          </div>
+        ) : (
+          <>
+            <ul className="divide-y divide-gray-300">
+              {carrinho.map((item) => (
+                <div className='bg-white'>
+                  <li key={item.id} className="flex justify-between items-center py-2 gap-5 shadow-2xl">
+                    <div className='flex flex-col px-5'>
+                      <span>{item.nome} x{item.quantidade}</span>
+                      <span>R$ {item.preco}</span>
+                    </div>
+                    <div className="px-5 py-5 grid gap-2">
+                      <button
+                        onClick={() => removerItem(item.id)}
+                        className="bg-red-500 text-white px-2 py-1 rounded"
+                      >
+                        Remover
+                      </button>
+                      <button
+                        onClick={() => adicionarItem(item)}
+                        className="bg-green-500 text-white px-2 py-1 rounded"
+                      >
+                        Adicionar
+                      </button>
+                    </div>
+                  </li>
                 </div>
-              </li>
-            ))}
-          </ul>
-
-          <p className="text-right mt-4 font-bold">Total: R$ {total.toFixed(2)}</p>
-
-          <button
-            onClick={limparCarrinho}
-            className="mt-6 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 block mx-auto"
-          >
-            Limpar Carrinho
-          </button>
-        </>
-      )}
-    </section>
+              ))}
+            </ul>
+            <p className="text-left mt-4 font-bold text-xl">Total: R$ {total.toFixed(2)}</p>
+            <button
+              onClick={limparCarrinho}
+              className="mt-6 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 block mx-auto"
+            >
+              Limpar Carrinho
+            </button>
+          </>
+        )}
+      </section>
+      <div className='flex justify-center'>
+        <Link href='/Cardapio' className='text-orange-700 font-bold rounded-lg px-4 py-2 sm:mx-30'>Adicionar produtos
+        </Link>
+      </div>
+    </main>
   );
 }
